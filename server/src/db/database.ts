@@ -1,8 +1,10 @@
 import Database from "better-sqlite3";
 
 const db = new Database(
-  process.env.DATABASE_PATH || "applications.db"
-);
+    process.env.NODE_ENV === "test"
+      ? ":memory:"
+      : process.env.DATABASE_PATH || "applications.db"
+  );
 
 db.pragma("journal_mode = WAL");
 
