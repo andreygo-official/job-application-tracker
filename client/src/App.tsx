@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { applicationApi } from "./services/api";
-import { ApplicationForm } from "./components/ApplicationForm";
+import {ApplicationForm} from "./components/ApplicationForm";
 import { ApplicationCard } from "./components/ApplicationCard";
 import type {
   JobApplication,
